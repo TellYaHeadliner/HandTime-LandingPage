@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    font-family: "roboto",sans-serif;
+    color: black;
+}
+
+:root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+header{
+    width: 100%;
+    height: 76px;
+    display: flex;
+    list-style: none;
+    padding: 15px 25px 15px 25px;
+    justify-content: space-between;
+    .header-logo{
+        .logo{
+            display: inline-block;
+            padding: 5px 0 5px 0;
+            line-height: inherit;
+            white-space: nowrap;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    .header-navbar{
+        display: flex;
+        align-items: center;
+        .header-lists{
+            display: inline;
+            a{
+                text-decoration: none;
+                padding: 7px 25px;
+                text-align: center;
+                text-transform: uppercase;
+                border-radius: 5px;
+                transition: all 0.3s;
+
+            }
+            .active{
+                background: var(--indigo);
+                color: var(--white);
+            }
+
+            a:active{
+                background: var(--indigo);
+                color: var(--white);
+            }
+        }
+
+    }
+    .header-useritems{
+        display: flex;
+        align-items: center;
+        a{
+            text-decoration: none;
+            color: var(--indigo); 
+            margin-left: 15px;
+        }
+    }
+}
+
+.slider{
+    width: 100%;
+    height: 500px;
+    background: url("../images/slider-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    .slider-detailbox{
+        position: absolute;
+        left: 50px;
+        bottom: 200px;
+        h1{
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            font-size: 2.5rem;
+        }
+        p{
+            margin: 25px 0;
+        }
+        .slider-btnboxs{
+            margin: 0;
+            .slider-box{
+                color: white;
+                text-decoration: none;
+                border-radius: 0;
+                border: 0;
+                transition: all 0.3s;
+                padding: 10px 15px;
+                margin-right: 5px;
+                &--green{
+                    background: var(--green);
+                }
+                &--purple{
+                    background: var(--indigo);
+                }
+            }
+ 
+
+        }
+    }
+    .carousel-indicators{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        bottom: 100px;
+        left: 630px;
+        li{
+            box-sizing: content-box;
+            display: inline;
+            width: 15px;
+            height: 15px;
+            background: var(--white);
+            border-radius: 100%;
+            margin-left: 3px;
+            margin-right: 3px;
+            &.active{
+                width: 15px;
+                height: 15px;
+                background: var(--green);
+            }
+        }
+
+    }
+}
+
+.service-section{
+    display: flex;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    background-color: #f8f8f8;
+    .item{
+        display: inline;
+        padding: 45px 15px 45px 15px;
+        text-align: center;
+        img{
+            height: 65px;
+            cursor: pointer;
+            transition: all 0.3s;
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
+
+        img:hover{
+            filter: var(--purple);
+            -webkit-filter: var(--purple);
+        }
+  
+        h5{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+        }
+        p{
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.aboutshop{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 90px;
+    padding-top: 90px;
+    .aboutshop__img-container{
+        display: flex;
+        width: 30%;
+        gap: 30px;
+    }
+    .aboutshop__img{
+        img{
+            width: 60vh;
+        }
+        .container{
+            width: 100%;
+            height: 20%;
+            background-color: #f6f6f6;
+        &-1{
+            transform: translateY(425px);
+        }
+ 
+    }
+}
+    .a-2{
+        margin-top: 10px;
+    }
+
+    .a-1{
+        margin-top: -124px;
+    }
+    .detail-box{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 430px;
+        margin-left: 380px;
+        margin-top: 224px;
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            margin-top: 35px;
+        }
+        a{
+            background-color: var(--indigo);
+            color: var(--white);
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin-top: 35px;
+            text-decoration: none;
+            border: 0;
+            padding: 8px 35px;
+            width: 30%;
+        }
+    }
+}
+
+.watch{
+    width: 100%;
+    margin-bottom: 45px;
+}
