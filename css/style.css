@@ -24,6 +24,17 @@ a {
   text-decoration: none;
 }
 
+li {
+  box-sizing: content-box;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--purple);
+  border-radius: 100%;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -511,16 +522,15 @@ header .header-useritems a {
 }
 .testi__slider {
   display: flex;
+  align-items: center;
 }
 .testi__slider .img {
-  width: 125px;
+  width: 310px;
   height: 125px;
   min-height: 125px;
   border-radius: 50%;
   border: 5px solid var(--green);
   overflow: hidden;
-  margin-left: 230px;
-  margin-right: 20px;
 }
 .testi__slider .img img {
   width: 100%;
@@ -550,6 +560,11 @@ header .header-useritems a {
   color: var(--green);
   line-height: 1.2;
   margin-top: 0;
+}
+.testi .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
 }
 
 footer {
