@@ -24,17 +24,6 @@ a {
   text-decoration: none;
 }
 
-li {
-  box-sizing: content-box;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-color: var(--purple);
-  border-radius: 100%;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -507,64 +496,81 @@ header .header-useritems a {
 }
 
 .testi {
-  padding: 90px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .testi__h2 {
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .testi__h2 h2 {
   font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
   line-height: 1.2;
+  margin-top: 0;
+  font-size: 2rem;
 }
-.testi__slider {
+.testi__box {
   display: flex;
-  align-items: center;
-}
-.testi__slider .img {
-  width: 310px;
-  height: 125px;
-  min-height: 125px;
-  border-radius: 50%;
-  border: 5px solid var(--green);
-  overflow: hidden;
-}
-.testi__slider .img img {
-  width: 100%;
-}
-.testi__slider .detail {
   background-color: #fff;
   padding: 45px 45px 45px 85px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 45px 250px;
 }
-.testi__slider .detail__info {
+.testi__box .img {
+  width: 125px;
+  height: 125px;
+  min-width: 125px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  border: 5px solid var(--green);
+  left: 200px;
+}
+.testi__box .img img {
+  width: 100%;
+}
+.testi__box .content__info {
   display: flex;
   justify-content: space-between;
 }
-.testi__slider .detail__info .name h6 {
+.testi__box .content__info .client-name h5 {
+  font-size: 1.25rem;
   font-weight: bold;
   color: var(--indigo);
   margin-bottom: 0;
   text-transform: uppercase;
-  line-height: 1.2;
-  margin-top: 0;
 }
-.testi__slider .detail__info .name h5 {
+.testi__box .content__info .client-name h6 {
   margin-bottom: 0;
+  color: var(--green);
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
-  color: var(--green);
-  line-height: 1.2;
-  margin-top: 0;
+}
+.testi__box .content__info i {
+  font-size: 24px;
+  color: var(--indigo);
 }
 .testi .carousel-indicators {
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  padding: 0;
+}
+.testi .carousel-indicators li {
+  display: inline;
+  box-sizing: content-box;
+  width: 15px;
+  height: 15px;
+  background-color: var(--indigo);
+  border-radius: 100%;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 footer {
